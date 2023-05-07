@@ -1,6 +1,5 @@
 package uts_A11202113721;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,6 +19,8 @@ public class Main{
             String nama = input.nextLine();
             System.out.print("Semester: ");
             int semester = input.nextInt();
+            System.out.println("Usia: ");
+            int usia = input.nextInt();
     
             System.out.print("Jumlah mata kuliah: ");
             int jumlahMataKuliah = input.nextInt();
@@ -36,7 +37,7 @@ public class Main{
                 input.nextLine();
             }
             
-            Mahasiswa mhs = new Mahasiswa(nim, nama, semester, i, krs);
+            Mahasiswa mhs = new Mahasiswa(nim, nama, semester, usia, krs);
 
             ArrayList<Mahasiswa> listmahasiswa = new ArrayList<Mahasiswa>();
             listmahasiswa.add(mhs);
@@ -47,9 +48,10 @@ public class Main{
                 System.out.println("Rata-rata Nilai: "+ mahasiswa.hitungRataNilai(nilai));
                 System.out.println("======================================");
 
-                input.close();
+                
             }
         }
-   
+        
+        input.close();
     }
 }

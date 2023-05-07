@@ -26,16 +26,6 @@ public class MahasiswaLulus extends Mahasiswa{
         System.out.println("IPK : " + ipk);
     }
 
-    public static void main(String[] args) {
-        String [] krs = {"Pemrograman Berorientasi Objek", "Algoritma dan Struktur Data", "Pemrograman Web"};
-        int nilai[] = {80, 90, 85};
-        MahasiswaLulus mhs = new MahasiswaLulus("A11.2021.13721","Selviana Dwi", 3, 19, krs, 2025, 3.5f);
-        mhs.infoMahasiswa();
-        System.out.println("Ikut Wisuda : " + mhs.ikutWisuda());
-        System.out.println("Rata-rata Nilai : " + mhs.hitungRataNilai(nilai));
-    }
-
-
 
 }
 

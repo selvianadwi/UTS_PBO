@@ -5,9 +5,9 @@ public class Mahasiswa {
     String nim;
     String nama;
     int semester;
-    int usia;
+    int usia; 
     String[] krs;
-
+ 
     //construktor
     public Mahasiswa(String nim, String nama, int semester, int usia, String[] krs){
         this.nim = nim;
@@ -32,10 +32,6 @@ public class Mahasiswa {
         System.out.println("Nama : " + nama);
         System.out.println("Semester : " + semester);
         System.out.println("Usia : " + usia);
-        System.out.print("KRS : ");
-        for (int i = 0; i < krs.length; i++) {
-            System.out.println(krs[i]);
-        }
     }
 
     public void infoKrsMahasiswa(){
@@ -44,4 +40,5 @@ public class Mahasiswa {
             System.out.println(krs[i]);
         }
     }
+
 }

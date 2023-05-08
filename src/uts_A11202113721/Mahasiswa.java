@@ -26,7 +26,6 @@ public class Mahasiswa {
         return total/nilai.length;
     } 
 
-
     public void infoMahasiswa(){
         System.out.println("NIM : " + nim);
         System.out.println("Nama : " + nama);
@@ -35,9 +34,9 @@ public class Mahasiswa {
     }
 
     public void infoKrsMahasiswa(){
-        System.out.print("KRS : ");
         for (int i = 0; i < krs.length; i++) {
-            System.out.println(krs[i]);
+            System.out.print("KRS Mahasiswa " + (i+1) + " : " + krs[i] + "\n");
+           
         }
     }
 

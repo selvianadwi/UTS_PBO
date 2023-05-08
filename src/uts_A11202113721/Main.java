@@ -2,6 +2,7 @@ package uts_A11202113721;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import uts_A11202113721.Mahasiswa;
 
 public class Main{
     public static void main(String[] args) {
@@ -10,7 +11,8 @@ public class Main{
         //input data mahasiswa
         System.out.print("Jumlah mahasiswa: ");
         int jumlahMahasiswa = input.nextInt();
-        input.nextLine(); // consume new line
+        input.nextLine();
+
         for (int i = 0; i < jumlahMahasiswa; i++) {
             System.out.println("Mahasiswa ke-" + (i+1));
             System.out.print("NIM: ");
@@ -19,7 +21,7 @@ public class Main{
             String nama = input.nextLine();
             System.out.print("Semester: ");
             int semester = input.nextInt();
-            System.out.println("Usia: ");
+            System.out.print("Usia: ");
             int usia = input.nextInt();
     
             System.out.print("Jumlah mata kuliah: ");
@@ -30,25 +32,23 @@ public class Main{
             int nilai[] = new int[jumlahMataKuliah];
 
             for (int j = 0; j < jumlahMataKuliah; j++) {
-                System.out.println("masukkan nama mata kuliah: ");
+                System.out.print("masukkan nama mata kuliah: " + (j+1) + ": ");
                 krs[j] = input.nextLine();
-                System.out.println("masukkan nilai mata kuliah: ");
+                System.out.print("masukkan nilai mata kuliah: " + (j+1) + ": ");
                 nilai[j] = input.nextInt();
                 input.nextLine();
             }
             
             Mahasiswa mhs = new Mahasiswa(nim, nama, semester, usia, krs);
-
             ArrayList<Mahasiswa> listmahasiswa = new ArrayList<Mahasiswa>();
             listmahasiswa.add(mhs);
-
-            for(Mahasiswa mahasiswa : listmahasiswa){
+    
+            for (Mahasiswa mahasiswa : listmahasiswa) {
+                System.out.println("=====================================");
                 mahasiswa.infoMahasiswa();
                 mahasiswa.infoKrsMahasiswa();
-                System.out.println("Rata-rata Nilai: "+ mahasiswa.hitungRataNilai(nilai));
-                System.out.println("======================================");
-
-                
+                System.out.println("Rata-rata nilai: " + mahasiswa.hitungRataNilai(nilai));
+                System.out.println("=====================================");
             }
         }
         

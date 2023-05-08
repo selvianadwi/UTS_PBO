@@ -13,7 +13,7 @@ public class MahasiswaLulus extends Mahasiswa{
 
     //method
     public boolean ikutWisuda(){
-        if (ipk >= 2.75) {
+        if (semester >= 8) {
             return true;
         } else {
             return false;

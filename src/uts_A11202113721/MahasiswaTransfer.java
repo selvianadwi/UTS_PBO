@@ -17,11 +17,4 @@ public class MahasiswaTransfer extends MahasiswaBaru {
     public boolean ikutOspek(){
         return super.ikutOspek();
     }
-
-    public static void main(String[] args) {
-        String[] krs = {"Pemrograman Berorientasi Objek", "Algoritma dan Struktur Data", "Pemrograman Web"};
-        MahasiswaTransfer mhs = new MahasiswaTransfer("Achmad Solichin", "A11.2021.13721", 3, 19, krs, "SMAN 1 Kediri", "Universitas Brawijaya");
-        mhs.infoMahasiswa();
-        System.out.println("Ikut OSPEK : " + mhs.ikutOspek());
-    }
 }
